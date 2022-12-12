@@ -17,7 +17,7 @@ class CreateVisitsTable extends Migration
             $table->id();
             $table->foreignId('visitor_id')->constrained()->onDelete('cascade');
             $table->text('reason');
-            $table->text('observaciones');
+            $table->text('observations');
             $table->date('date');
             $table->time('time_entry');
             $table->time('time_departure');

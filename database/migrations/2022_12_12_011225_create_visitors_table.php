@@ -20,7 +20,7 @@ class CreateVisitorsTable extends Migration
             $table->string('email')->unique();
             $table->text('address');
             $table->string('phone_number');
-            $table->integer('cedula');
+            $table->integer('cedula')->unique();
             $table->enum('nationality', ["V", "E"]);
             $table->foreignId('state_id')->constrained()->onDelete('cascade');
             $table->foreignId('city_id')->constrained()->onDelete('cascade');
