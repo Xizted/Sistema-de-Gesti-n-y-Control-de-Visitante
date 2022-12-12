@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Traits\CreatedUpdatedDeletedBy;
+use App\Visit;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -32,5 +33,10 @@ class Visitor extends Model
     public function city()
     {
         return $this->belongsTo(City::class);
+    }
+
+    public function visits()
+    {
+        return $this->hasMany(Visit::class);
     }
 }
