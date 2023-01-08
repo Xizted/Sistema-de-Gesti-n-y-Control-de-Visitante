@@ -10941,6 +10941,10 @@ body {
   z-index: 11;
 }
 
+.navbar .navbar-collapse {
+  flex-basis: auto;
+}
+
 /* Sidebar */
 
 .sidebar {
