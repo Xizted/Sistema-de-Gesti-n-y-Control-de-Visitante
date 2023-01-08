@@ -2,7 +2,7 @@
 
 namespace App\Traits;
 
-trait CreatedUpdatedDeletedBy
+trait CreatedUpdatedDeletedByTrait
 {
     public static function CreatedUpdatedDeletedBy()
     {

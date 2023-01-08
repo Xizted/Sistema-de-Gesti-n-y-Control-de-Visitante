@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Traits\CreatedUpdatedDeletedBy;
+use App\Traits\CreatedUpdatedDeletedByTrait;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -12,7 +12,7 @@ class User extends Authenticatable
 {
     use Notifiable;
     use SoftDeletes;
-    use CreatedUpdatedDeletedBy;
+    use CreatedUpdatedDeletedByTrait;
 
     /**
      * The attributes that are mass assignable.
