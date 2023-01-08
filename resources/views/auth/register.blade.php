@@ -12,7 +12,7 @@
     <x-input name="lastName" inputType="text" placeholder="Ingrese su Apellido" labelText="Apellido" />
     <x-input name="email" inputType="email" placeholder="Ingrese su Correo" :labelText="__('Email')" />
     <x-input name="password" inputType="password" placeholder="Ingrese su Contraseña" :labelText="__('Password')" />
-    <x-input name="password-confirm" inputType="password" placeholder="Confirme su Contraseña" :labelText="__('Confirm Password')" />
+    <x-input name="password_confirmation" inputType="password" placeholder="Confirme su Contraseña" :labelText="__('Confirm Password')" />
     <div class="form-group row mb-0">
         <button type="submit" class="btn btn-primary w-100">
             {{ __('Register') }}
