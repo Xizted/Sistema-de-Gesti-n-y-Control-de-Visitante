@@ -1,5 +1,14 @@
 @extends('layouts.dashboard')
 
+@php
+$options = [
+["name" => 'Externo', "value" => 'Externo'],
+["name" => 'Interno', "value" => 'Interno'],
+["name" => 'Estudiante', "value" => 'Estudiante'],
+["name" => 'Profesor', "value" => 'Profesor']
+]
+@endphp
+
 @section('contenido')
 <div class="container-main">
     <div class="row gap-row-2">
@@ -56,5 +65,62 @@
             </div>
         </div>
     </div>
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="bg-secondary p-2">
+                <form class="row p-2">
+                    <div class="col-4">
+                        <x-select name="type" :options="$options" labelText="Tipo de Visitante" />
+                    </div>
+                    <div class="col-4">
+                        <x-input labelText="Desde" inputType="date" name="from" placeholder="desde" />
+                    </div>
+                    <div class="col-4">
+                        <x-input labelText="Hasta" inputType="date" name="to" placeholder="hasta" />
+                    </div>
+                </form>
+                <hr class="bg-white" />
+                <div>
+                    <canvas id="userChart" class="rounded shadow"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
+
+@push('js')
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script>
+    const labels = [
+        'January'
+        , 'February'
+        , 'March'
+        , 'April'
+        , 'May'
+        , 'June'
+    , ];
+
+    const data = {
+        labels: labels
+        , datasets: [{
+            label: 'My First dataset'
+            , backgroundColor: 'rgb(255, 99, 132)'
+            , borderColor: 'rgb(255, 99, 132)'
+            , data: [0, 10, 5, 2, 20, 30, 45]
+        , }]
+    };
+
+    const config = {
+        type: 'line'
+        , data: data
+        , options: {}
+    };
+
+    new Chart(
+        document.getElementById('userChart')
+        , config
+    );
+
+</script>
+@endpush
