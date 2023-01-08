@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
-<div class="container-fluid vh-100 overflow-hidden">
+<div class="container-fluid">
     <div class="row">
-        <div class="d-none d-lg-flex col-lg-8 col-12 vh-100 ">
+        <div class="d-none d-lg-flex col-lg-8 col-12">
             <div class="d-none d-lg-flex align-items-center p-5 col-sm-12 col-lg-12">
                 <div class="w-100 d-lg-flex align-items-center justify-content-center px-5">
                     {{-- <img src="{{ asset('images/auth/register.png') }}" class="img-fluid" /> --}}

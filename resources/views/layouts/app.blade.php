@@ -20,8 +20,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @stack('css')
 </head>
-<body class="vh-100">
-    <div id="app" class="vh-100">
+<body>
+    <div id="app">
         @yield('content')
     </div>
     @stack('js')
