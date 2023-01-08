@@ -1,5 +1,19 @@
 @extends('layouts.auth')
 
+
+@php
+$options = [
+[
+"name" => 'Administrador',
+"value" => 'admin'
+],
+[
+"name" => 'Empleado',
+"value" => 'employer'
+],
+]
+@endphp
+
 @section('contenido')
 <div class="container">
     <div class="row justify-content-center">
@@ -57,10 +71,7 @@
                             <label for="role" class="col-md-4 col-form-label text-md-right">Role</label>
 
                             <div class="col-md-6">
-                                <select class="form-control" name="role">
-                                    <option value="admin">Administrador</option>
-                                    <option value="employer">Empleado</option>
-                                </select>
+                                <x-select name="role" :options="$options" />
                                 @error('role')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
