@@ -1,8 +1,9 @@
 @extends('layouts.app')
-<nav class="navbar navbar-expand-md navbar-light bg-secondary  shadow-sm">
+<nav class="navbar navbar-expand-md navbar-light bg-secondary  shadow">
     <div class="container">
         <a class="navbar-brand text-white" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+            {{-- {{ config('app.name', 'Laravel') }} --}}
+            Sistema de Control de Visitantes
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -45,6 +46,16 @@
                 </li>
                 @endguest
             </ul>
+        </div>
+    </div>
+</nav>
+<nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-secondary shadow">
+    <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+            <a href="/" class="item list-group-item list-group-item-action py-2 ripple text-white {{ (request()->is('home')) ? 'active' : '' }}" aria-current="true">
+                <i class="fa-sharp fa-solid fa-house mr-3"></i>
+                <span class="font-weight-bold">Home</span>
+            </a>
         </div>
     </div>
 </nav>
