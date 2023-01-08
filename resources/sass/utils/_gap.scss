@@ -1,0 +1,19 @@
+.gap {
+    &-1 {
+        gap: 1rem;
+    }
+
+    &-2 {
+        gap: 2rem;
+    }
+}
+
+.gap-row {
+    &-1 {
+        row-gap: 1rem;
+    }
+
+    &-2 {
+        row-gap: 2rem;
+    }
+}

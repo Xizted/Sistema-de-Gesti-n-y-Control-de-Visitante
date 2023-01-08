@@ -2,3 +2,19 @@ html,
 body {
     height: 100%;
 }
+
+* {
+    color: white;
+}
+
+.container-main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+@media (min-width: 990px) {
+    .container-main {
+        padding-left: 18rem;
+        padding-right: 2rem;
+    }
+}

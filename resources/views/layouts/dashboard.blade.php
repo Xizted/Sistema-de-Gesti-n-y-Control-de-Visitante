@@ -1,4 +1,6 @@
 @extends('layouts.app')
+
+@section('content')
 <nav class="navbar navbar-expand-lg navbar-light bg-secondary flex-row flex-nowrap justify-content-start shadow">
     <div class="container">
         <div>
@@ -48,3 +50,4 @@
 <main class="py-4">
     @yield('contenido')
 </main>
+@endsection

@@ -10932,9 +10932,41 @@ a.text-dark:focus {
   }
 }
 
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-row-1 {
+  row-gap: 1rem;
+}
+
+.gap-row-2 {
+  row-gap: 2rem;
+}
+
 html,
 body {
   height: 100%;
+}
+
+* {
+  color: white;
+}
+
+.container-main {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+@media (min-width: 990px) {
+  .container-main {
+    padding-left: 18rem;
+    padding-right: 2rem;
+  }
 }
 
 .navbar {
@@ -10989,5 +11021,9 @@ body {
   .sidebar {
     width: 100%;
   }
+}
+
+.bg-icons-primary {
+  background: rgba(8, 152, 152, 0.12);
 }
 
