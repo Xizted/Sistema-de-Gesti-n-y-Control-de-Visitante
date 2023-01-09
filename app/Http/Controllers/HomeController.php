@@ -23,6 +23,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard.home');
+        $options = [
+            ["name" => 'Externo', "value" => 'Externo'],
+            ["name" => 'Interno', "value" => 'Interno'],
+            ["name" => 'Estudiante', "value" => 'Estudiante'],
+            ["name" => 'Profesor', "value" => 'Profesor']
+        ];
+
+        return view('dashboard.home', ['options' => $options]);
     }
 }

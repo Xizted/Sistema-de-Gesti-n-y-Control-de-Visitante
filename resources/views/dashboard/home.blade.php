@@ -1,14 +1,5 @@
 @extends('layouts.dashboard')
 
-@php
-$options = [
-["name" => 'Externo', "value" => 'Externo'],
-["name" => 'Interno', "value" => 'Interno'],
-["name" => 'Estudiante', "value" => 'Estudiante'],
-["name" => 'Profesor', "value" => 'Profesor']
-]
-@endphp
-
 @section('contenido')
 <div class="container-main">
     <div class="row gap-row-2">

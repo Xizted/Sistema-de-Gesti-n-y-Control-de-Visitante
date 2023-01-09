@@ -10957,6 +10957,10 @@ body {
   color: white;
 }
 
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
 .container-main {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -11025,5 +11029,9 @@ body {
 
 .bg-icons-primary {
   background: rgba(8, 152, 152, 0.12);
+}
+
+select option {
+  background-color: #283046;
 }
 

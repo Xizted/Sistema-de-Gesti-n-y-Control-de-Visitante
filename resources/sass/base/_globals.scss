@@ -7,6 +7,10 @@ body {
     color: white;
 }
 
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
 .container-main {
     padding-left: 2rem;
     padding-right: 2rem;
