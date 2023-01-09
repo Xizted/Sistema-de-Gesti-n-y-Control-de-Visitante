@@ -64,10 +64,10 @@
                         <x-select name="type" :options="$options" labelText="Tipo de Visitante" />
                     </div>
                     <div class="col-4">
-                        <x-input labelText="Desde" inputType="date" name="from" placeholder="desde" />
+                        <x-input labelText="Desde" inputType="date" name="from" placeholder="desde" max="{{ date('Y-m-d') }}" />
                     </div>
                     <div class="col-4">
-                        <x-input labelText="Hasta" inputType="date" name="to" placeholder="hasta" />
+                        <x-input labelText="Hasta" inputType="date" name="to" placeholder="hasta" max="{{ date('Y-m-d') }}" />
                     </div>
                 </form>
                 <hr class="bg-white" />
